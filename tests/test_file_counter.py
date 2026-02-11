@@ -19,9 +19,10 @@ def test_missing_file():
      file_counter.count_lines("testdata/missing.txt") 
 
 def test_Mixed_TC():
-    assert 3 == file_counter.count_lines("testdata/Mixed-lines.txt")
+    assert 3 == file_counter.count_lines("testdata/mixed-Lines.txt")
 
 def test_Mixed_Ara_English_char():
     assert 3 == file_counter.count_lines("testdata/Mixed-Ara&Eng.txt") 
 def test_Large_lines():
     assert 1000 == file_counter.count_lines("testdata/large-lines.txt")     
+
