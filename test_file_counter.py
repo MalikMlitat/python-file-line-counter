@@ -1,6 +1,7 @@
 import pytest
 from pathlib import Path
-from file_counter import count_lines  
+from file_counter.file_counter import count_lines
+
 
 @pytest.fixture
 def tmp_files(tmp_path):
