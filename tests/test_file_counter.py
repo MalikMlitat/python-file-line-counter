@@ -16,3 +16,6 @@ def test_file_counter_nonexistent_file():
         assert False, "Expected FileNotFoundError" 
     except FileNotFoundError: 
         assert True
+
+def test_file_counter_single_character_lines():
+    assert 1 == file_counter.count_lines("testdata/single_character_lines.txt")
