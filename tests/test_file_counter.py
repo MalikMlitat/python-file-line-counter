@@ -8,3 +8,11 @@ def test_file_counter_empty_file():
 
 def test_file_counter_file_with_only_newlines():
     assert 3 == file_counter.count_lines("testdata/file_with_only_newlines.txt")
+
+
+def test_file_counter_nonexistent_file(): 
+    try: 
+        file_counter.count_lines("testdata/nonexistent_file.txt") 
+        assert False, "Expected FileNotFoundError" 
+    except FileNotFoundError: 
+        assert True
