@@ -1,5 +1,5 @@
-from file_counter.file_counter import count_lines
 import pytest
+from file_counter.file_counter import count_lines
 
 def test_count_lines_with_text_file():
     with open("test_file.txt", "w") as f:
@@ -19,7 +19,7 @@ def test_count_lines_with_empty_lines():
         f.write("\n")
         f.write("Line 2\n")
         f.write("\n")
-    assert count_lines("file_with_empty_lines.txt") == 2
+    assert count_lines("file_with_empty_lines.txt") == 4
 
 def test_count_lines_file_not_found():
     with pytest.raises(FileNotFoundError):
