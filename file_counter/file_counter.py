@@ -1,15 +1,7 @@
 def count_lines(file_path):
     """
-    Counts the number of lines in a given file efficiently.
-
-    Args:
-        file_path (str): The path to the file.
-
-    Returns:
-        int: The total number of lines in the file.
+    Counts all lines in a file, including empty lines and the last line
+    even if it doesn't end with a newline character.
     """
     with open(file_path, "r") as file:
-        line_count = sum(1 for _ in file)
-    return line_count
-
-
+        return sum(1 for _ in file)
