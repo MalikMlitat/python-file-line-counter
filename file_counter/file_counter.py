@@ -8,8 +8,8 @@ def count_lines(file_path):
     Returns:
         int: The total number of lines in the file.
     """
-
-    with open(file_path) as file:
-        line_count = sum(1 for line in file if len(line.strip()) > 1)
+    with open(file_path, "r") as file:
+        line_count = sum(1 for _ in file)
     return line_count
+
 
