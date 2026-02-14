@@ -1,7 +1,11 @@
 def count_lines(file_path):
     """
-    Counts all lines in a file, including empty lines and the last line
-    even if it doesn't end with a newline character.
+    Counts all lines in a file correctly, including empty lines,
+    and returns 0 for truly empty files.
     """
-    with open(file_path, "r") as file:
-        return sum(1 for _ in file)
+    with open(file_path, "r") as f:
+        lines = f.readlines()
+        # إذا الملف فارغ فعليًا
+        if len(lines) == 1 and lines[0] == "":
+            return 0
+        return len(lines)
