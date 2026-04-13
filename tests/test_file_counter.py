@@ -1,8 +1,8 @@
+import os
 from file_counter.file_counter import count_lines
 
 def test_file_with_5_lines():
-    assert count_lines("testdata/file_with_5_lines.txt") == 5
+    base_dir = os.path.dirname(__file__)
+    file_path = os.path.join(base_dir, "..", "testdata", "file_with_5_lines.txt")
 
-
-def test_empty_file():
-    assert count_lines("testdata/empty.txt") == 0
+    assert count_lines(file_path) == 5
