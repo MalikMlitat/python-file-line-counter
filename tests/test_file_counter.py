@@ -14,3 +14,13 @@ def test_empty_file():
 def test_invalid_path_file():
     result =file_counter.count_lines("testdat/file_with_5_lines.txt")
     assert "invalid" in result
+
+def test_empty_file_with_lines():
+    assert 0 ==file_counter.count_lines("testdata/empty_file_empty_lines.txt")
+
+
+def test_one_letter_file():
+    assert 1==file_counter.count_lines("testdata/file_with_one_letter.txt")
+
+def test_file_with_no_newLine_end():
+    assert 5==file_counter.count_lines("testdata/file_with_no_newline_end.txt")
